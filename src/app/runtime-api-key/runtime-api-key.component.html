@@ -1,0 +1,7 @@
+<mat-form-field appearance="fill" floatLabel="auto" style="width: 500px; margin-top: 10px; margin-left: 10px;">
+    <mat-label>(newsapi.org) API Key Authentication</mat-label>
+    <input matInput [formControl]="formControl" placeholder="Ex. 90aXXXXXXXXXXXXXXXXXXXXXXXXXX9b6">
+    <mat-error *ngIf="formControl.hasError('required') || formControl.hasError('nullValidator')">
+        API Key is <strong>required</strong>
+    </mat-error>
+</mat-form-field>

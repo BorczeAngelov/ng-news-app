@@ -22,8 +22,13 @@ export class AppComponent implements AfterViewInit, OnInit {
     private cd: ChangeDetectorRef,
     private newsApi: NewsApiService) { }
 
-
   ngOnInit(): void {
+
+  }
+
+  initData() {
+    console.log(this.newsApi.runtime_api_key);
+
 
     this.newsApi.initArticles()
       .subscribe((response: any) => {
@@ -38,7 +43,6 @@ export class AppComponent implements AfterViewInit, OnInit {
         console.log(response);
         this.sources = response.sources;
       });
-
   }
 
 
@@ -64,7 +68,7 @@ export class AppComponent implements AfterViewInit, OnInit {
 
   searchSource(source: any) {
     console.log(source);
-    
+
     this.newsApi.getArticlesByID(source.id)
       .subscribe((response: any) => {
 

@@ -10,10 +10,16 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
+import { RuntimeApiKeyComponent } from './runtime-api-key/runtime-api-key.component';
+import { MatInputModule, } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RuntimeApiKeyComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +31,11 @@ import { MatIconModule } from '@angular/material/icon';
     MatSidenavModule,
     MatDividerModule,
     MatIconModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

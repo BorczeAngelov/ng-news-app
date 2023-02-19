@@ -3,15 +3,18 @@
     <mat-icon (click)="this.sideNav.open()" *ngIf="!sideNav.opened" class="mat-18">menu</mat-icon>
     <mat-icon (click)="this.sideNav.close()" *ngIf="sideNav.opened" class="mat-18">close</mat-icon>
   </button>
-  <span>(Ng Demo) News API App</span>
+
+  <span>(Angular Demo) News API App</span>
+
+  <span class="example-spacer"></span>
+  <button (click)="initData()" mat-raised-button color="warn">Submit API Key</button>
+  <app-runtime-api-key></app-runtime-api-key>
 </mat-toolbar>
 
 <mat-sidenav-container>
   <mat-sidenav #sideNav="matSidenav">
-    <!-- TODO: add image-->
     <img src="../../assets/vectorstock_latest_news.jpg" alt="" class="avatar mat-elavation-z8">
     <h4>Trending World News </h4>
-    <h5>API: newsapi.org</h5>
     <mat-divider></mat-divider>
 
     <ng-container *ngFor="let source of sources">
