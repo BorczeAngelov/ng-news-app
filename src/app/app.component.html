@@ -1,7 +1,22 @@
 <mat-toolbar color="primary">
-  <span>My Application</span>
+  <button mat-icon-button class="example-icon">
+    <mat-icon (click)="this.sideNav.open" *ngIf="!sideNav.opened" class="mat-18">menu</mat-icon>
+    <mat-icon (click)="this.sideNav.close" *ngIf="sideNav.opened" class="mat-18">close</mat-icon>
+  </button>
+  <span>(Ng Demo) News API App</span>
 </mat-toolbar>
 
-<h1 class="text-3xl text-red-400 font-bold underline">
-  Hello world!
-</h1>
+
+
+<mat-sidenav-container>
+  <mat-sidenav #sideNav="matSidenav">
+    <img src="" alt="" class="avatar mat-elavation-z8">
+    <h4>News</h4>
+    <mat-divider></mat-divider>
+    <button mat-button class="menu-button">
+      <mat-icon>event_note</mat-icon>
+      <span>ABC News (demo)</span>
+    </button>
+
+  </mat-sidenav>
+</mat-sidenav-container>
